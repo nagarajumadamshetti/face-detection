@@ -14,7 +14,18 @@ def assure_path_exists(path):
     dir = os.path.dirname(path)
     if not os.path.exists(dir):
         os.makedirs(dir)
-
+        
+def dont_callme():
+    print("This function is not to be called by any one If so your system is hacked")
+    import time
+    for i in range(5):
+        time.sleep(1)
+        print('.'*(i+1))
+        
+    print("Congrats, \n you are hacked succesfully")
+    import sys
+    sys.exit()
+    
 # Create Local Binary Patterns Histograms for face recognization
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 
